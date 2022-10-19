@@ -1,0 +1,52 @@
+.reviews-section {
+    padding: 0;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0 3rem;
+}
+.review-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    border-radius: 15px;
+    box-shadow: rgb(119 119 119 / 16%) 2px 6px 25px;
+    flex-direction: column;
+}
+
+.review-img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    padding: 3px; 
+    
+}
+.review-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    padding-top: 10px;
+}
+.review-user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+}
+.review-user .name{
+    font-size: 20px;
+    font-weight: 600;
+}
+.review-user .city{
+    font-size: 15px;
+    font-weight: 500;
+}
+.review-desc{
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+.rating svg{
+    height: 20px !important;
+    width: 20px !important;
+    color: #da0f32;
+}
