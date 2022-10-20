@@ -6,3 +6,7 @@ section {
 hr {
 	width: 15rem;
 }
+
+section.buses-section {
+	margin-top: 0;
+}
