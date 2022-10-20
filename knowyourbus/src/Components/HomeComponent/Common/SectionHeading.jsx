@@ -11,3 +11,4 @@ const SectionHeading = (props) => {
 };
 
 export default SectionHeading;
+ 
