@@ -1,0 +1,77 @@
+.bus-page {
+	display: flex;
+}
+.bus-cards * {
+	margin: 0;
+}
+
+.bus-cards h2 {
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin: 0.8rem 0;
+}
+.bus-cards p {
+	font-size: 1.2rem;
+}
+
+.bus-filters {
+	width: 20%;
+}
+.bus-cards {
+	width: 80%;
+	display: flex;
+	border-radius: 10px;
+	border: 1px solid #da0f32;
+	height: min-content;
+}
+.bus-card-info {
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem 3rem;
+	border-right: 1px solid #da0f32;
+	align-items: center;
+}
+.bus-card-info .location-points {
+	font-weight: 500;
+	font-size: 1.3rem;
+}
+
+.bus-cards hr {
+	width: 20rem;
+}
+
+.travel-time {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.travel-time p {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+.bus-booking-card {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem;
+}
+.bus-booking-info {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 1.7rem;
+}
+
+.bus-booking-card .book-btn {
+	width: 50%;
+	background-color: #da0f32;
+	color: white;
+	height: 50px;
+	border-radius: 1.2rem;
+	border: none;
+	font-size: 1.7rem;
+	font-weight: 600;
+}
