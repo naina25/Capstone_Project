@@ -1,7 +1,12 @@
 import React from "react";
+import Policies from "../Components/BusesComponent/Policies/Policies";
 
 const Buses = () => {
-    return <section className="busees-section">Buses</section>;
+    return (
+        <>
+            <Policies />
+        </>
+    );
 };
 
 export default Buses;
