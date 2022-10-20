@@ -25,13 +25,13 @@
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 .review-user{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 20px;
 }
 .review-user .name{
     font-size: 20px;
@@ -43,10 +43,17 @@
 }
 .review-desc{
     font-size: 15px;
-    padding-bottom: 10px;
+    padding-bottom: 50px;
 }
 .rating svg{
     height: 20px !important;
     width: 20px !important;
     color: #da0f32;
+}
+.swiper-button-next, .swiper-button-prev{
+    color: #1e2227;
+    size: 20px;
+}
+.swiper-pagination{
+    color: #1e2227;
 }
