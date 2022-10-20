@@ -5,6 +5,7 @@ import Login from "./Pages/Login";
 import Navbar from "./Components/Shared/Navbar/Navbar";
 import Footer from "./Components/Shared/Footer/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Buses from "./Pages/Buses";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                 <Routes>
                     <Route path="/" exact element={<Home />}></Route>
                     <Route path="/login" element={<Login />}></Route>
+                    <Route path="/buses" element={<Buses />}></Route>
                 </Routes>
             </Router>
             <Footer />
