@@ -1,19 +1,12 @@
 section {
-    margin-top: 7rem;
+	padding: 0 2rem;
+	margin-top: 7rem;
 }
 
-hr{
-    width: 15rem;
+hr {
+	width: 15rem;
 }
-.ut_background_bus{
-    background: url(https://www.onlineupsrtc.co.in/Bus_BG_UP.c859190a4ab43b6861ec.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    height: 800px;
-}
-h6 {
-    color: black;
-    font-size: 16px;
-    margin: 0;
+
+section.buses-section {
+	margin-top: 0;
 }
