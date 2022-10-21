@@ -5,7 +5,7 @@ import Policies from "../Components/BusesComponent/Policies/Policies";
 const Buses = () => {
     return (
         <section className="busees-section">
-            <Amenities />
+            {/* <Amenities /> */}
             <Policies />
         </section>
     );

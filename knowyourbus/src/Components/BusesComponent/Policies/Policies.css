@@ -6,7 +6,7 @@
     margin-top: 5px;
     transition: 0.800s ease;
     position: sticky;
-    
+    right: -110%;
 }
 .pol-headings{
     font-size: 20px;
@@ -27,8 +27,8 @@
     top: 0px;
     right: 0px;
     cursor: pointer;
-    width: 16px;
-    height: 16px;
+    width: 20px !important;
+    height: 20px !important;
     
 }
 .cancel-table table{
