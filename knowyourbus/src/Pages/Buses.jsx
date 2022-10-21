@@ -6,12 +6,12 @@ import SearchForm from "../Components/SearchForm/SearchForm";
 import BusPage from "../Components/BusesComponent/BusPage/BusPage";
 
 const Buses = () => {
-	return (
-		<section className="buses-section">
-			<SearchForm />
-			<BusPage />
-		</section>
-	);
+    return (
+        <section className="buses-section">
+           <SearchForm />
+			     <BusPage />
+        </section>
+    );
 };
 
 export default Buses;
