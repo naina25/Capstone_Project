@@ -6,6 +6,7 @@ import Navbar from "./Components/Shared/Navbar/Navbar";
 import Footer from "./Components/Shared/Footer/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Buses from "./Pages/Buses";
+import AboutUs from "./Pages/AboutUs";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                     <Route path="/" exact element={<Home />}></Route>
                     <Route path="/login" element={<Login />}></Route>
                     <Route path="/buses" element={<Buses />}></Route>
+                    <Route path="/AboutUs" element={<AboutUs />}></Route>
                 </Routes>
             </Router>
             <Footer />
