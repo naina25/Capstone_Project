@@ -1,0 +1,19 @@
+.amenities-div{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    background-color: #f8f9fa;
+    padding: 2rem;
+    justify-content: center;
+}
+.amenity-div{
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    width: 25%;
+    color: #3e3e52;
+}
+
+.amenity-div svg{
+    margin-right: 1rem;
+}

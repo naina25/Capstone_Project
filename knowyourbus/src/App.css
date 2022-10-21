@@ -1,7 +1,12 @@
 section {
-    margin-top: 7rem;
+	padding: 0 2rem;
+	margin-top: 7rem;
 }
 
-hr{
-    width: 15rem;
+hr {
+	width: 15rem;
+}
+
+section.buses-section {
+	margin-top: 0;
 }
