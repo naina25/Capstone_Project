@@ -1,19 +1,21 @@
-.amenities-div{
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    background-color: #f8f9fa;
-    padding: 2rem;
-    justify-content: center;
+.amenities-div {
+	display: flex;
+	flex-wrap: wrap;
+	/* width: 80%; */
+	background-color: #f8f9fa;
+	padding: 2rem;
+	justify-content: center;
+	position: relative;
+	transition: 1s;
 }
-.amenity-div{
-    display: flex;
-    align-items: center;
-    font-size: 1.3rem;
-    width: 25%;
-    color: #3e3e52;
+.amenity-div {
+	display: flex;
+	align-items: center;
+	font-size: 1.3rem;
+	width: 25%;
+	color: #3e3e52;
 }
 
-.amenity-div svg{
-    margin-right: 1rem;
+.amenity-div svg {
+	margin-right: 1rem;
 }

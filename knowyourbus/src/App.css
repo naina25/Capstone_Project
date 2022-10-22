@@ -7,6 +7,10 @@ hr {
 	width: 15rem;
 }
 
+input {
+	background-color: #eee;
+}
+
 section.buses-section {
-	margin-top: 0;
+	padding-left: 0;
 }
