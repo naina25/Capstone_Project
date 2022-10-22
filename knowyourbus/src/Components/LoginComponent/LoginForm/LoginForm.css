@@ -1,94 +1,102 @@
-.login-form-div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+.login-form {
+    margin: auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    margin-bottom: 5rem;
+    background: #eee;
+    box-shadow: 0 0 1rem 0.8rem rgba(0, 0, 0, 0.3);
 }
 
-.login-form-div h2 {
-	font-size: 2.5rem;
+.heading-banner {
+    background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url("../../../assets/loginForm-banner.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
+    text-align: center;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
-.login-form-div label {
-	display: block;
-	font-size: 1.7rem;
+.heading-banner h2 {
+    font-size: 3rem;
+    color: white;
 }
 
-.login-input {
-	margin: 2rem;
+.form-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    height: 250px;
 }
 
-.login-btn {
-	background-color: #da0f32;
-	color: white;
-	border: none;
-	padding: 8px;
-	border-radius: 3px;
+.login-inputs {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 6rem;
+}
+
+.login-inputs input {
+    border: none;
+    outline: none;
+    background: none;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(30, 34, 39, 0.4);
+    transition: 0.4s all ease;
+    width: 25rem;
+}
+.login-inputs input:focus-visible {
+    border-bottom: 2px solid rgba(30, 34, 39, 1);
+}
+
+.login-inputs label {
+    font-size: 1.5rem;
+    color: rgb(107, 107, 107);
+    padding: 0 1rem;
+}
+
+.form-body button {
+    margin-top: 2rem;
+    padding: 1rem 3.5rem;
+    background: none;
+    border: 1px solid rgb(218, 15, 50);
+    color: rgb(218, 15, 50);
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s all ease;
+}
+.form-body button:hover {
+    background-color: rgba(218, 15, 50, 0.9);
+    color: white;
 }
 
 .card {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
-	min-width: 400px;
-
-	margin: auto;
-
-	text-align: center;
-
-	font-family: arial;
-
-	min-height: 690px;
-
-	padding-top: 50px;
-
-	padding-bottom: 50px;
-
-	padding-right: 30px;
-
-	padding-left: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    min-width: 400px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    min-height: 690px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
 }
-
-.title {
-	color: grey;
-
-	font-size: 18px;
-}
-
-button {
-	border: none;
-
-	outline: 0;
-
-	display: inline-block;
-
-	padding: 8px;
-
-	color: white;
-
-	background-color: #000;
-
-	text-align: center;
-
-	cursor: pointer;
-
-	width: 100%;
-
-	font-size: 18px;
-}
-
-a {
-	text-decoration: none;
-
-	font-size: 22px;
-
-	color: black;
-}
-
-button:hover,
-a:hover {
-	opacity: 0.7;
-}
-
 .profile_image {
-	max-width: 250px;
+    max-width: 250px;
 }
