@@ -3,11 +3,9 @@
 	width: 450px;
 	margin-top: 5px;
 	transition: 0.8s ease;
-	/* position: fixed; */
 	top: 6rem;
 	padding: 2rem;
 	border-radius: 10px;
-	/* right: 0px; */
 }
 .pol-headings {
 	font-size: 20px;
@@ -28,12 +26,12 @@
 	top: 0px;
 	right: 0px;
 	cursor: pointer;
-	width: 16px;
-	height: 16px;
+  width: 20px !important;
+  height: 20px !important;
 }
 .cancel-table table * {
 	border: 1px solid #b2b2b2;
-	/* border-radius: 20px; */
+	border-radius: 20px;
 	overflow: hidden;
 	margin-bottom: 20px;
 }

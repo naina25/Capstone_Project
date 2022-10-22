@@ -61,19 +61,19 @@ const Reviews = () => {
                     <div className="review-card">
                         <div className=" review-img">
                             <img
-                                src="https://media.istockphoto.com/photos/headshot-portrait-of-smiling-ethnic-businessman-in-office-picture-id1300512215?b=1&k=20&m=1300512215&s=170667a&w=0&h=LsZL_-vvAHB2A2sNLHu9Vpoib_3aLLkRamveVW3AGeQ="
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB4BTzJ2dUBngLavEuF42DLiko8F1DDrqprA&usqp=CAU"
                                 alt=""
                             />
                         </div>
                         <div className="review-user">
-                            <span className="name">Aditya Sharma</span>
-                            <span className="city">Noida</span>
+                            <span className="name">Neha Verma</span>
+                            <span className="city">Jaipur</span>
                         </div>
                         <div className="rating">
                             <StarIcon />
                             <StarIcon />
                             <StarIcon />
-                            <StarBorderIcon />
+                            <StarIcon />
                             <StarBorderIcon />
                         </div>
                         <div className="review-desc">
