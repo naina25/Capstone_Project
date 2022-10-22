@@ -1,5 +1,5 @@
 import "./BusPage.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BusCards from "../BusCards/BusCards";
 import Sidefilter from "../SideFilter/Sidefilter";
 import axios from "axios";
@@ -14,15 +14,18 @@ const BusPage = () => {
 		});
 	};
 
-	getBuses();
+	useEffect(() => {
+		getBuses();
+	}, []);
 
 	return (
 		<div className="bus-page">
 			<Sidefilter />
 			<div className="bus-cards-section">
 				{routes &&
-					routes.map((route) => (
+					routes.map((route, index) => (
 						<BusCards
+							key={index}
 							departureCity={route.Departure_City}
 							destinationCity={route.Destination_City}
 							fare={route.Cost}
