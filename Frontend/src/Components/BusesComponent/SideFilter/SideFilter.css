@@ -1,0 +1,72 @@
+#sidebar {
+	padding: 20px 30px 20px 30px;
+	margin: 0;
+	width: 20%;
+	background-color: #eee;
+}
+.filter-div {
+	margin: 1rem 0 3rem;
+	width: max-content;
+}
+#products {
+	width: 80%;
+	padding: 10px;
+	margin: 0;
+	float: right;
+}
+.ut_list {
+	font-size: 12px;
+	color: black;
+}
+.mb-2 {
+	font-size: 16px;
+}
+#sidebar ul {
+	list-style: none;
+	padding: 5px;
+	font-size: 16px;
+}
+#sidebar li {
+	margin-bottom: 1.2rem;
+}
+#sidebar li a {
+	color: black;
+	text-decoration: none;
+}
+#sidebar li a:hover {
+	text-decoration: none;
+	color: darksalmon;
+}
+.fa-circle {
+	font-size: 20px;
+}
+#red {
+	color: #e94545d7;
+}
+#teal {
+	color: rgb(69, 129, 129);
+}
+#blue {
+	color: #0000ff;
+}
+.card {
+	width: 250px;
+	display: inline-block;
+	height: 300px;
+}
+.card-img-top {
+	width: 250px;
+	height: 210px;
+}
+.card-body p {
+	margin: 2px;
+}
+.card-body {
+	padding: 0;
+	padding-left: 2px;
+}
+.filter {
+	display: none;
+	padding: 0;
+	margin: 0;
+}
