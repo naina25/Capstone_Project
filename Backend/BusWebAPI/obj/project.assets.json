@@ -5523,20 +5523,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\devesh.singh\\.nuget\\packages\\": {}
+    "C:\\Users\\naina.upadhyay\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\training\\Capstone_Project\\Backend\\BusWebAPI\\BusWebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\naina.upadhyay\\Desktop\\CapStone Project\\Backend\\BusWebAPI\\BusWebAPI.csproj",
       "projectName": "BusWebAPI",
-      "projectPath": "C:\\training\\Capstone_Project\\Backend\\BusWebAPI\\BusWebAPI.csproj",
-      "packagesPath": "C:\\Users\\devesh.singh\\.nuget\\packages\\",
-      "outputPath": "C:\\training\\Capstone_Project\\Backend\\BusWebAPI\\obj\\",
+      "projectPath": "C:\\Users\\naina.upadhyay\\Desktop\\CapStone Project\\Backend\\BusWebAPI\\BusWebAPI.csproj",
+      "packagesPath": "C:\\Users\\naina.upadhyay\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\naina.upadhyay\\Desktop\\CapStone Project\\Backend\\BusWebAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\devesh.singh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\naina.upadhyay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5610,7 +5615,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.410\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
       }
     }
   }
