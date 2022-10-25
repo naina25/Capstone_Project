@@ -21,3 +21,11 @@ section.profile-section {
     margin-left: 4rem;
     margin-right: 4rem;
 }
+
+
+.contact{
+    background-image: url(C:\Users\Mudit.Arya\Desktop\project\Frontend\Capstone_Project\Frontend\src\assets\offersImgs\contactbg3.webp);
+    background-size: cover;
+    height: 140vh;
+    margin-top: -15rem;
+}
