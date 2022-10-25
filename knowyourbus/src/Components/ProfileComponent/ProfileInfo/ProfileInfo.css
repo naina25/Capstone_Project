@@ -1,0 +1,41 @@
+.profileInfo-div {
+    width: 72%;
+    background-color: #eee;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+}
+.profileInfo-div .title {
+    display: flex;
+    align-items: center;
+}
+.profileInfo-div hr {
+    width: 100%;
+}
+.profileInfo-div .title svg {
+    margin-right: 1rem;
+    font-size: 2.5rem;
+    color: #da0f32;
+}
+.profileInfo-div .title h2 {
+    font-size: 2rem;
+    color: #da0f32;
+}
+
+.userinfo-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    margin: 0 2rem;
+}
+
+.info p {
+    font-size: 1.5rem;
+    width: 25%;
+}
+.info p.label {
+    font-weight: 600;
+}
