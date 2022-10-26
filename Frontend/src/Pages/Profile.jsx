@@ -1,12 +1,10 @@
 import React from "react";
-import ProfileInfo from "../Components/ProfileComponent/ProfileInfo/ProfileInfo";
-import ProfileSidebar from "../Components/ProfileComponent/ProfileSidebar/ProfileSidebar";
+import ProfilePage from "../Components/ProfileComponent/ProfilePage";
 
 const Profile = () => {
     return (
         <section className="profile-section">
-            <ProfileSidebar />
-            <ProfileInfo />
+            <ProfilePage />
         </section>
     );
 };

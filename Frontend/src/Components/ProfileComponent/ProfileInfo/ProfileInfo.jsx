@@ -2,7 +2,7 @@ import React from "react";
 import "./ProfileInfo.css";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
     return (
         <div className="profileInfo-div">
             <div className="title">
@@ -13,15 +13,15 @@ const ProfileInfo = () => {
             <div className="userinfo-div">
                 <div className="info">
                     <p className="label">First Name</p>
-                    <p>Naina</p>
+                    <p>{props.userDetails.User_first_Name}</p>
                 </div>
                 <div className="info">
                     <p className="label">Last Name</p>
-                    <p>Upadhyay</p>
+                    <p>Dutta Bajpai</p>
                 </div>
                 <div className="info">
                     <p className="label">Gender</p>
-                    <p>Female</p>
+                    <p>Male</p>
                 </div>
                 <div className="info">
                     <p className="label">Email Id</p>
@@ -29,7 +29,7 @@ const ProfileInfo = () => {
                 </div>
                 <div className="info">
                     <p className="label">Contact number</p>
-                    <p>9886768973</p>
+                    <p>{props.userDetails.User_Phone_Number}</p>
                 </div>
             </div>
         </div>
