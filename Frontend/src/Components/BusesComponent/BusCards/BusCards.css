@@ -76,6 +76,7 @@
 	border: none;
 	font-size: 1.7rem;
 	font-weight: 600;
+	cursor: pointer;
 }
 
 .bus-card-links {
@@ -101,4 +102,11 @@
 
 .bus-cards:hover .bus-card-links {
 	opacity: 1;
+}
+
+.book-div{
+	position: fixed;
+	top: 25%;
+	visibility: hidden;
+	z-index: 3;
 }

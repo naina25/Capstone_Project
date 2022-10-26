@@ -1,0 +1,60 @@
+.form-popup{
+    background: #eee;
+    padding: 2rem;
+    border-radius: 5px;
+    margin-left: 5rem;
+}
+.form-popup h1{
+    font-size: 2rem;
+}
+.add-user .add-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(218, 15, 50);
+    padding: 10px;
+    font-weight: 500;
+}
+.submitadd-btn button{
+    background-color: #da0f32;
+	color: white;
+	border: none;
+    font-size: 1.7rem;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;  
+}
+.submitadd-btn{
+    display: flex;
+    justify-content: center;
+}
+ .remove-btn{
+    background-color: #da0f32;
+	color: white;
+	border: none;
+    font-size: 1.7rem;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.book-input{
+    margin-right: 1rem;
+}
+.book-input input,select{
+    padding: 6px;
+    
+}
+select{
+    background-color: #eee;
+    border: 2px solid;
+    font-weight: 600;
+}
+.form-content{
+    padding: 5px;
+}
+::placeholder{
+    font-weight: 600;
+    color: #1e2227;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}

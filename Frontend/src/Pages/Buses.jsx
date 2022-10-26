@@ -8,8 +8,8 @@ import BusPage from "../Components/BusesComponent/BusPage/BusPage";
 const Buses = () => {
     return (
         <section className="buses-section">
-           <SearchForm />
-			     <BusPage />
+            <SearchForm />
+            <BusPage />
         </section>
     );
 };
