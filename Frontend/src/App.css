@@ -24,8 +24,16 @@ section.profile-section {
 
 
 .contact{
-    background-image: url(C:\Users\Mudit.Arya\Desktop\project\Frontend\Capstone_Project\Frontend\src\assets\offersImgs\contactbg3.webp);
+    background-image: url('../src/assets/offersImgs/contactbg3.webp');
     background-size: cover;
-    height: 140vh;
+    height: 130vh;
     margin-top: -15rem;
 }
+
+/* .trippp{
+    background-image: url(C:\Users\Mudit.Arya\Desktop\project\Frontend\Capstone_Project\Frontend\src\assets\offersImgs\tripbg3.webp);
+    background-size:contain;
+    height: 100vh;
+    margin-top: 0;
+    padding-top: 15rem;
+} */

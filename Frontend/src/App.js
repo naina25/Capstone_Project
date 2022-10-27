@@ -8,7 +8,7 @@ import Buses from "./Pages/Buses";
 import Profile from "./Pages/Profile";
 import Foffers from "./Pages/Foffers";
 import ContactUs from "./Pages/ContactUs";
-
+import Tripy from "./Pages/Tripy";
 function App() {
 	return (
 		<div className="App">
@@ -21,6 +21,7 @@ function App() {
 					<Route path="/users/:user_id" element={<Profile />} />
 					<Route path="/offers" element={<Foffers/>}/>
 					<Route path="/contact" element={<ContactUs/>}/>
+					<Route path="/trip" element={<Tripy/>}/>
 				</Routes>
 			</Router>
 			<Footer />
