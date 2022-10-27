@@ -14,15 +14,16 @@ import ContactUs from "./Pages/ContactUs";
 function App() {
 	return (
 		<div className="App">
-			<Navbar />
+			
 			<Router>
+			<Navbar />
 				<Routes>
 					<Route path="/" exact element={<Home />} />
 					<Route path="/login" element={<Login />} />
 					<Route path="/buses" element={<Buses />} />
 					<Route path="/users/:user_id" element={<Profile />} />
-          <Route path="/booknow" element={<BookNow />} />
-          <Route path="/offers" element={<Foffers/>}/>
+                    <Route path="/booknow" element={<BookNow />} />
+                    <Route path="/offers" element={<Foffers/>}/>
 					<Route path="/contact" element={<ContactUs/>}/>
 				</Routes>
 			</Router>
