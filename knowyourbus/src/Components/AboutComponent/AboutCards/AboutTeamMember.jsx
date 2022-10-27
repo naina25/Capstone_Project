@@ -1,16 +1,18 @@
-import React from 'react'
+import React from 'react';
+import "./AboutTeamMember.css";
+
+
 
 const AboutTeamMember = () => {
   return (
-    <section className="home" id="home">
-            <div className="banner-content">
-                <h3>Book your bus from here with lowest prices</h3>
-                <h3>
-                    {" "}
-                    <span>Know Your Bus</span>
-                </h3>
-            </div>
-        </section>
+
+    <div className="about-team-member">
+      <h2>About Us</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam ducimus, earum laudantium sit veritatis minus vitae consequuntur doloremque assumenda aliquam voluptatibus explicabo nesciunt labore laborum facere velit quos eius architecto.
+      </p>
+    </div>
+    
   )
 }
 
