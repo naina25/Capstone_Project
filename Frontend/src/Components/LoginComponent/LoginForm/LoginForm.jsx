@@ -20,7 +20,7 @@ const LoginForm = () => {
         await axios
             .post("https://localhost:44387/api/login", data)
             .then((res) => {
-                localStorage.setItem("token", res.token);
+                localStorage.setItem("token", res.data);
 
                 alert("login done");
                 setSuccess(true);
