@@ -14,7 +14,6 @@ function Contact(props) {
                 <h3>{props.text2}</h3>
             </div>
         </div>
-        
     </div>
   )
 }
