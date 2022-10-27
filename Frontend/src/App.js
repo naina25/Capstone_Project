@@ -9,25 +9,39 @@ import Profile from "./Pages/Profile";
 import BookNow from "./Components/BusesComponent/BookNow/BookNow";
 import Foffers from "./Pages/Foffers";
 import ContactUs from "./Pages/ContactUs";
-
+import { AuthProvider } from "./Context/auth.context";
+import Cookies from "universal-cookie";
+import ProtectedRoute from "./Routes/ProtectedRoute";
 
 function App() {
+	const cookies = new Cookies();
+	let tokenData = cookies.get("my_cookie");
+	// console.log(tokenData);
+
 	return (
 		<div className="App">
-			
-			<Router>
-			<Navbar />
-				<Routes>
-					<Route path="/" exact element={<Home />} />
-					<Route path="/login" element={<Login />} />
-					<Route path="/buses" element={<Buses />} />
-					<Route path="/users/:user_id" element={<Profile />} />
-                    <Route path="/booknow" element={<BookNow />} />
-                    <Route path="/offers" element={<Foffers/>}/>
-					<Route path="/contact" element={<ContactUs/>}/>
-				</Routes>
-			</Router>
-			<Footer />
+			<AuthProvider tokenData={tokenData}>
+				<Router>
+					<Navbar />
+					<Routes>
+						<Route path="/" exact element={<Home />} />
+						<Route path="/login" element={<Login />} />
+						<Route path="/buses" element={<Buses />} />
+						<Route path="/booknow" element={<BookNow />} />
+						<Route path="/offers" element={<Foffers />} />
+						<Route path="/contact" element={<ContactUs />} />
+						<Route
+							path="/users/:user_id"
+							element={
+								<ProtectedRoute>
+									<Profile />
+								</ProtectedRoute>
+							}
+						/>
+					</Routes>
+				</Router>
+				<Footer />
+			</AuthProvider>
 		</div>
 	);
 }
