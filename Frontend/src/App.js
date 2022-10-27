@@ -12,11 +12,11 @@ import ContactUs from "./Pages/ContactUs";
 import { AuthProvider } from "./Context/auth.context";
 import Cookies from "universal-cookie";
 import ProtectedRoute from "./Routes/ProtectedRoute";
+import Tripy from "./Pages/Tripy";
 
 function App() {
 	const cookies = new Cookies();
 	let tokenData = cookies.get("my_cookie");
-	// console.log(tokenData);
 
 	return (
 		<div className="App">
@@ -30,6 +30,7 @@ function App() {
 						<Route path="/booknow" element={<BookNow />} />
 						<Route path="/offers" element={<Foffers />} />
 						<Route path="/contact" element={<ContactUs />} />
+					  <Route path="/trip" element={<Tripy/>}/>
 						<Route
 							path="/users/:user_id"
 							element={
