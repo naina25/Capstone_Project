@@ -15,6 +15,7 @@ import Cookies from "universal-cookie";
 import ProtectedRoute from "./Routes/ProtectedRoute";
 import Tripy from "./Pages/Tripy";
 import BookNow from "./Components/BusesComponent/BookNow/BookNow";
+import SignUp from "./Pages/SignUp";
 
 
 function App() {
@@ -34,8 +35,9 @@ function App() {
 						<Route path="/booknow" element={<BookNow />} />
 						<Route path="/offers" element={<Foffers />} />
 						<Route path="/contact" element={<ContactUs />} />
-            <Route path="/aboutus" element={<AboutUs/>}/>
-					  <Route path="/trip" element={<Tripy/>}/>
+						<Route path="/signup" element={<SignUp />} />
+            			<Route path="/aboutus" element={<AboutUs/>}/>
+					 	<Route path="/trip" element={<Tripy/>}/>
 						<Route
 							path="/users/:user_id"
 							element={
