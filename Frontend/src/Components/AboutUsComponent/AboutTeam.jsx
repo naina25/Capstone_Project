@@ -1,6 +1,6 @@
 import React from 'react'
 import './AboutTeam.css'
-
+  
 function AboutTeam(props) {
   return (
     <div className="about-us">

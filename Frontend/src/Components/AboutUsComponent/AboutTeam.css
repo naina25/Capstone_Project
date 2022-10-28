@@ -15,7 +15,35 @@
     height: 200px;
     width: 200px;
     margin-left: 5px;
-
 } 
 
+.hr-width{
+    width: 100%;
+}
 
+/* .about-us-section
+{
+    margin-left: 4rem;
+    margin-bottom: 4rem;
+    padding-left: 4rem ;
+}
+
+.about-us-heading
+{
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.about-us-content-body{
+    margin-top: 2rem;
+}
+
+
+
+.about-us img
+{
+    border-radius: 50%;
+    width: 200px;
+   height: 150px;
+} */
