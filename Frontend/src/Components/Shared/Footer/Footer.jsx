@@ -10,11 +10,9 @@ const Footer = () => {
 		<footer className="footer">
 			<div class="col-1">
 				<h3>About</h3>
-				<a href="">About Us</a>
-				<a href="">Blog</a>
-				<a href="">Careers</a>
-				<a href="">Contact Us</a>
-				<a href="">Offers</a>
+				<a href="#A">About Us</a>
+				<a href="#A">Contact Us</a>
+				<a href="#A">Offers</a>
 			</div>
 
 			<div class="col-2">
