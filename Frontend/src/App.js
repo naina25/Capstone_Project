@@ -10,25 +10,24 @@ import BookNow from "./Components/BusesComponent/BookNow/BookNow";
 import Foffers from "./Pages/Foffers";
 import ContactUs from "./Pages/ContactUs";
 
-
 function App() {
-	return (
-		<div className="App">
-			<Navbar />
-			<Router>
-				<Routes>
-					<Route path="/" exact element={<Home />} />
-					<Route path="/login" element={<Login />} />
-					<Route path="/buses" element={<Buses />} />
-					<Route path="/users/:user_id" element={<Profile />} />
-          <Route path="/booknow" element={<BookNow />} />
-          <Route path="/offers" element={<Foffers/>}/>
-					<Route path="/contact" element={<ContactUs/>}/>
-				</Routes>
-			</Router>
-			<Footer />
-		</div>
-	);
+    return (
+        <div className="App">
+            <Navbar />
+            <Router>
+                <Routes>
+                    <Route path="/" exact element={<Home />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/buses" element={<Buses />} />
+                    <Route path="/users/:user_id" element={<Profile />} />
+                    <Route path="/booknow" element={<BookNow />} />
+                    <Route path="/offers" element={<Foffers />} />
+                    <Route path="/contact" element={<ContactUs />} />
+                </Routes>
+            </Router>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
