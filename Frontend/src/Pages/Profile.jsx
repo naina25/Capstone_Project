@@ -8,14 +8,9 @@ import ProfilePage from "../Components/ProfileComponent/ProfilePage";
 
 
 const Profile = () => {
-    const [active,setActive]=useState("profile")
     return (
         <section className="profile-section">
-
-            <ProfileSidebar activeState={active} setActiveState={setActive}/>
-            {active==="profile" &&<ProfileInfo />}
-            {active==="trips"&&<Trips/>}
-
+        
             <ProfilePage />
 
         </section>
