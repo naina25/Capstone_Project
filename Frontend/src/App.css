@@ -15,13 +15,38 @@ section.buses-section {
     padding-left: 0;
 }
 
-section.profile-section {
+.profile-section {
     display: flex;
     justify-content: space-around;
     margin-left: 4rem;
     margin-right: 4rem;
 }
 
+.about-us-section
+{
+    margin-left: 4rem;
+    margin-bottom: 4rem;
+    padding-left: 4rem ;
+}
+
+.about-us-heading
+{
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.about-us-content-body{
+    margin-top: 2rem;
+}
+
+
+section.about-us img
+{
+    border-radius: 50%;
+    width: 200px;
+   height: 150px;
+}
 
 .contact{
     /* background-image: url(C:\Users\Mudit.Arya\Desktop\project\Frontend\Capstone_Project\Frontend\src\assets\offersImgs\contactbg3.webp); */
@@ -29,3 +54,4 @@ section.profile-section {
     height: 140vh;
     margin-top: -15rem;
 }
+

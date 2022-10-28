@@ -9,6 +9,7 @@ import Profile from "./Pages/Profile";
 import BookNow from "./Components/BusesComponent/BookNow/BookNow";
 import Foffers from "./Pages/Foffers";
 import ContactUs from "./Pages/ContactUs";
+import AboutUs from "./Pages/AboutUs";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                     <Route path="/booknow" element={<BookNow />} />
                     <Route path="/offers" element={<Foffers/>}/>
 					<Route path="/contact" element={<ContactUs/>}/>
+					<Route path="/aboutus" element={<AboutUs/>}/>
 				</Routes>
 			</Router>
 			<Footer />
