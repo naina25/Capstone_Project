@@ -54,4 +54,6 @@ section.buses-section {
     background-size: cover;
     height: 130vh;
     margin-top: -15rem;
+    display: flex;
+    margin-left: -6rem;
 }
