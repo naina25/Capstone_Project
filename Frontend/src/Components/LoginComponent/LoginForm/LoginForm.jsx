@@ -1,7 +1,6 @@
 import "./LoginForm.css";
 import React, { useState } from "react";
 import axios from "axios";
-import jwt_decode from "jwt-decode";
 import Cookies from "universal-cookie";
 import { useNavigate } from "react-router-dom";
 
@@ -24,7 +23,14 @@ const LoginForm = () => {
 		await axios
 			.post("https://localhost:44387/api/login", data)
 			.then((res) => {
-				console.log(res.data);
+				alert("login done");
+				setSuccess(true);
+
+				const token = res.data;
+
+				const cookies = new Cookies();
+				cookies.set("my_cookie", token);
+				navigate("/");
 			})
 			.catch((err) => {
 				console.log(err);
