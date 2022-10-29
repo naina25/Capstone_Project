@@ -48,4 +48,5 @@
 .profile-options li {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    cursor: pointer;
 }

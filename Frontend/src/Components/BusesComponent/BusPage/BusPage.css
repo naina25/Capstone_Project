@@ -1,23 +1,30 @@
 .bus-cards-section {
-	width: 80%;
+    width: 80%;
 }
 .bus-page {
-	display: flex;
-	margin-top: 3rem;
-	transition: 1s;
+    display: flex;
+    margin-top: 3rem;
+    transition: 1s;
 }
 #sidebar {
-	margin-right: 2rem !important;
+    margin-right: 2rem !important;
 }
 .ut_background_bus {
-	background: url(https://www.onlineupsrtc.co.in/Bus_BG_UP.c859190a4ab43b6861ec.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;
-	height: 800px;
+    background: url(https://www.onlineupsrtc.co.in/Bus_BG_UP.c859190a4ab43b6861ec.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 800px;
 }
 h6 {
-	color: black;
-	font-size: 16px;
-	margin: 0;
+    color: black;
+    font-size: 16px;
+    margin: 0;
+}
+
+.bus-page .noBusesMsg h2 {
+    /* text-align: center; */
+    margin-left: 3rem;
+    font-size: 2rem;
+    color: #da0f32;
 }
