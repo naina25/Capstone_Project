@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { NavLink } from "react-router-dom";
+import { useAuth } from "../../../Context/auth.context";
 
 const Navbar = () => {
+    const { authSuccess } = useAuth();
     function DropdownItem(props) {
         return (
             <li className="dropdownItem">

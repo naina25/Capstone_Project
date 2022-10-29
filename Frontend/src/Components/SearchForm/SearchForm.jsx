@@ -6,9 +6,20 @@ import { useNavigate } from "react-router-dom";
 
 const SearchForm = (props) => {
     const [cities, setCities] = useState([]);
-    const [city1, setCity1] = useState();
-    const [city2, setCity2] = useState();
-    const [departDate, setDepartDate] = useState("");
+    const [city1, setCity1] = useState(
+        props.routes ? props.routes[0] && props.routes[0].Departure_City : null
+    );
+    const [city2, setCity2] = useState(
+        props.routes
+            ? props.routes[0] && props.routes[0].Destination_City
+            : null
+    );
+    const [departDate, setDepartDate] = useState(
+        props.routes
+            ? props.routes[0] &&
+                  props.routes[0].Departure_Time_Date.slice(0, 10)
+            : null
+    );
     const [searchedData, setSearchedData] = useState();
 
     const navigate = useNavigate();
@@ -42,7 +53,7 @@ const SearchForm = (props) => {
     useEffect(() => {
         if (searchedData) navigate("/buses", { state: { searchedData } });
         else getCities();
-    }, [searchedData]);
+    }, [searchedData, navigate]);
 
     const handleChangeDeparture = (e) => {
         setCity1(e.target.value);
@@ -71,13 +82,7 @@ const SearchForm = (props) => {
                 placeholder="From"
                 list="cityOneName"
                 onChange={handleChangeDeparture}
-                value={
-                    city1 || city1 === ""
-                        ? city1
-                        : props.routes
-                        ? props.routes[0] && props.routes[0].Departure_City
-                        : city1
-                }
+                value={city1}
             />
             <datalist id="cityOneName">{cityMap}</datalist>
             <div>
@@ -87,14 +92,7 @@ const SearchForm = (props) => {
                     placeholder="To"
                     list="cityTwoName"
                     onChange={handleChangeDestination}
-                    value={
-                        city2 || city2 === ""
-                            ? city2
-                            : props.routes
-                            ? props.routes[0] &&
-                              props.routes[0].Destination_City
-                            : city2
-                    }
+                    value={city2}
                 />
                 <datalist id="cityTwoName">{cityMap}</datalist>
             </div>
@@ -104,12 +102,7 @@ const SearchForm = (props) => {
                     type="date"
                     placeholder="Choose Date"
                     onChange={handleChangeDate}
-                    value={
-                        props.routes
-                            ? props.routes[0] &&
-                              props.routes[0].Departure_Time_Date.slice(0, 10)
-                            : departDate
-                    }
+                    value={departDate}
                 />
             </div>
             <button type="submit">

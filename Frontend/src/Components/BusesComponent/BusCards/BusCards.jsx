@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Amenities from "../Amenities/Amenities";
 import Policies from "../Policies/Policies";
 import BookNow from "../BookNow/BookNow";
-import ProtectedRoute from "../../../Routes/ProtectedRoute";
 
 const BusCards = (props) => {
     const [showAmenities, setShowAmenities] = useState(false);
