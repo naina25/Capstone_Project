@@ -116,7 +116,7 @@ const BusCards = (props) => {
                 className="book-div"
                 style={openBookNow ? openBookNowComp : closeBookNowComp}
             >
-                <BookNow />
+                <BookNow routeid={props.routeid} />
             </div>
         </div>
     );
