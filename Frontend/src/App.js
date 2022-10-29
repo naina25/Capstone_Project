@@ -46,8 +46,9 @@ function App() {
 							}
 						/>
 					</Routes>
+					<Footer />
 				</Router>
-				<Footer />
+				
 			</AuthProvider>
 		</div>
 	);
