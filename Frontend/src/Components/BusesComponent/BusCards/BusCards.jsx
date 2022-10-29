@@ -6,40 +6,40 @@ import BookNow from "../BookNow/BookNow";
 import ProtectedRoute from "../../../Routes/ProtectedRoute";
 
 const BusCards = (props) => {
-	const [showAmenities, setShowAmenities] = useState(false);
-	const [showPolicies, setShowPolicies] = useState(false);
-	const [openBookNow, setOpenBookNow] = useState(false);
+    const [showAmenities, setShowAmenities] = useState(false);
+    const [showPolicies, setShowPolicies] = useState(false);
+    const [openBookNow, setOpenBookNow] = useState(false);
 
-	const openBookNowComp = {
-		visibility: "visible",
-		opacity: "1",
-		transition: "0.4s",
-	};
+    const openBookNowComp = {
+        visibility: "visible",
+        opacity: "1",
+        transition: "0.4s",
+    };
 
-	const closeBookNowComp = {
-		opacity: "0",
-		transition: "0.4s",
-	};
-	const showAmenitiesStyle = {
-		opacity: "1",
-		transition: "0.4s",
-	};
-	const hideAmenitiesStyle = {
-		opacity: "0",
-		transition: "0.4s",
-	};
-	const showPoliciesStyle = {
-		position: "fixed",
-		right: "0",
-		top: "6rem",
-		transition: "0.4s",
-	};
-	const hidePoliciesStyle = {
-		position: "fixed",
-		right: "-500px",
-		top: "6rem",
-		transition: "0.4s",
-	};
+    const closeBookNowComp = {
+        opacity: "0",
+        transition: "0.4s",
+    };
+    const showAmenitiesStyle = {
+        opacity: "1",
+        transition: "0.4s",
+    };
+    const hideAmenitiesStyle = {
+        opacity: "0",
+        transition: "0.4s",
+    };
+    const showPoliciesStyle = {
+        position: "fixed",
+        right: "0",
+        top: "6rem",
+        transition: "0.4s",
+    };
+    const hidePoliciesStyle = {
+        position: "fixed",
+        right: "-500px",
+        top: "6rem",
+        transition: "0.4s",
+    };
 
     return (
         <div className="bus-details">
@@ -117,7 +117,9 @@ const BusCards = (props) => {
                 className="book-div"
                 style={openBookNow ? openBookNowComp : closeBookNowComp}
             >
-                <BookNow routeid={props.routeid} />
+                <ProtectedRoute>
+                    <BookNow routeid={props.routeid} />
+                </ProtectedRoute>
             </div>
         </div>
     );
