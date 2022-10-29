@@ -30,7 +30,7 @@
 	height: 25px;
 	padding-right: 10px;
 }
-.col-3 img,h3{
+.col-3 img,.col-3 h3{
 	display: inline-flex;
 }
 .footer div h3 {
