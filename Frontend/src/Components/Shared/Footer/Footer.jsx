@@ -8,14 +8,14 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const Footer = () => {
 	return (
 		<footer className="footer">
-			<div class="col-1">
+			<div className="col-1">
 				<h3>About</h3>
 				<a href="#A">About Us</a>
 				<a href="#A">Contact Us</a>
 				<a href="#A">Offers</a>
 			</div>
 
-			<div classNAme="col-2">
+			<div className="col-2">
 				<h3>Contact</h3>
 				<p>
 					Noida sector 62, Logix park
