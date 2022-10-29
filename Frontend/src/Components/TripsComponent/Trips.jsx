@@ -1,7 +1,21 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import "./Trips.css";
 import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
+import axios from 'axios';
+
 function Trips() {
+  const [trips, setTrips] = useState([])
+  const getTrips = async () => {
+		await axios.get("https://localhost:44387/api/trip").then((res) => {
+			console.log(res.data);
+			setTrips(res.data);
+		});
+	};
+
+  useEffect(() => {
+    getTrips();
+  }, [])
+  
   return (
     <div className='container2'>
         <div className='trips-h1'>
@@ -11,24 +25,36 @@ function Trips() {
          <hr />
           {/* <hr /> */}
          <table width="100%">
+          <thead>
           <tr>
             <th>Date</th>
             <th>Name</th>
             <th>Age</th>
             <th>Gender</th>
-            <th>Trip</th>
+            <th>Departure City</th>
+            <th>Destination City</th>
             <th>Fare</th>
             <th>U-ID</th>
           </tr>
-          <tr>
-            <td>10-10-2022</td>
-            <td>Devesh Pandey</td>
-            <td>23</td>
-            <td>M</td>
-            <td>Ranchi- Raipur <br />(Chhattisgarh) <br /> Bus No - UP14AC2000</td>
-            <td>- INR 76.19</td>
-            <td>980978927</td>
-          </tr>
+          </thead>
+          <tbody>
+          {trips.map((trip, index) => {
+            return (
+            <tr>
+              <td>{trip.Departure_Time_Date.slice(0,10)}</td>
+              <td>{trip.passenger_name}</td>
+              <td>{trip.passenger_age}</td>
+              <td>{trip.passenger_gender}</td>
+              <td>{trip.Departure_City}</td>
+              <td>{trip.Destination_City}</td>
+              <td>{trip.cost}</td>
+              <td>{trip.passenger_uid}</td>
+           </tr>
+           ) 
+             
+          })} 
+        
+          </tbody>
          </table>
     </div>
   )
