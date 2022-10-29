@@ -16,6 +16,7 @@ const BusPage = ({ routes }) => {
                             destinationCity={route.Destination_City}
                             fare={route.Cost}
                             seats={route.Total_seats}
+                            routeid={route.Route_id}
                         />
                     ))
                 ) : (

@@ -1,13 +1,110 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./BookNow.css";
+import axios from "axios";
 
-const BookNow = () => {
-    const [passList, setPassList] = useState([{ value: "1" }]);
+const BookNow = (props) => {
+    const [passList, setPassList] = useState([{ value: "" }]);
+    const [passinfo, setPassInfo] = useState();
+    const [passengerDetails, setPassengerDetails] = useState({
+        routeid: props.routeid,
+        userid: 1,
+        name: "",
+        age: "",
+        gender: "",
+        email: "",
+        uid: "",
+    });
+
+    const [passDetailsArr, setPassDetailsArr] = useState([
+        {
+            routeid: props.routeid,
+            userid: 1,
+            name: "",
+            age: "",
+            gender: "",
+            email: "",
+            uid: "",
+        },
+    ]);
+
+    // useEffect(() => {
+    //     setPassDetailsArr((prev) => {
+    //         return [...prev, passengerDetails];
+    //     });
+    //     console.log(passDetailsArr);
+    // }, [passengerDetails]);
+
+    useEffect(() => {
+        console.log(passDetailsArr);
+    }, [passDetailsArr]);
+
     const addPassenger = () => {
+        setPassDetailsArr((prevArr) => [...prevArr, passengerDetails]);
         setPassList((prev) => {
             return [...prev, { value: "" }];
         });
     };
+
+    const postPassenger = async () => {
+        axios
+            .post("https://localhost:44387/api/Bookings/BookNow")
+            .then((res) => {
+                console.log(res);
+                setPassInfo(res);
+            });
+    };
+
+    const handleChangeName = (index, e) => {
+        setPassDetailsArr((passArr) => {
+            return passArr.map((pass, i) => {
+                if (i === index) {
+                    console.log(i);
+                    return { ...pass, name: e.target.value };
+                } else return pass;
+            });
+        });
+    };
+    const handleChangeEmail = (index, e) => {
+        setPassDetailsArr((passArr) => {
+            return passArr.map((pass, i) => {
+                if (i === index) {
+                    console.log(i);
+                    return { ...pass, email: e.target.value };
+                } else return pass;
+            });
+        });
+    };
+    const handleChangeAge = (index, e) => {
+        setPassDetailsArr((passArr) => {
+            return passArr.map((pass, i) => {
+                if (i === index) {
+                    console.log(i);
+                    return { ...pass, age: e.target.value };
+                } else return pass;
+            });
+        });
+    };
+    const handleChangeGender = (index, e) => {
+        setPassDetailsArr((passArr) => {
+            return passArr.map((pass, i) => {
+                if (i === index) {
+                    console.log(i);
+                    return { ...pass, gender: e.target.value };
+                } else return pass;
+            });
+        });
+    };
+    const handleChangeUid = (index, e) => {
+        setPassDetailsArr((passArr) => {
+            return passArr.map((pass, i) => {
+                if (i === index) {
+                    console.log(i);
+                    return { ...pass, uid: e.target.value };
+                } else return pass;
+            });
+        });
+    };
+
     // const removePassenger = () => {
     //     passList.filter((i, j) => index !== j);
     //     setPassList(passList);
@@ -22,6 +119,9 @@ const BookNow = () => {
                             id="name"
                             placeholder="Passenger Name"
                             required
+                            onChange={(e) => {
+                                handleChangeName(index, e);
+                            }}
                         />
                     </span>
                     <span className="book-input">
@@ -30,10 +130,19 @@ const BookNow = () => {
                             id="age"
                             placeholder="Age"
                             required
+                            onChange={(e) => {
+                                handleChangeAge(index, e);
+                            }}
                         />
                     </span>
                     <span className="book-input">
-                        <select id="gender" placeholder="Gender">
+                        <select
+                            id="gender"
+                            placeholder="Gender"
+                            onChange={(e) => {
+                                handleChangeGender(index, e);
+                            }}
+                        >
                             <option>Gender</option>
                             <option>Male</option>
                             <option>Female</option>
@@ -44,6 +153,19 @@ const BookNow = () => {
                             type="email"
                             id="email"
                             placeholder="Email"
+                            onChange={(e) => {
+                                handleChangeEmail(index, e);
+                            }}
+                        ></input>
+                    </span>
+                    <span className="book-input">
+                        <input
+                            type="number"
+                            id="adhaar"
+                            placeholder="Adhaar"
+                            onChange={(e) => {
+                                handleChangeUid(index, e);
+                            }}
                         ></input>
                     </span>
                     <span>
@@ -67,7 +189,13 @@ const BookNow = () => {
                         + Add passenger
                     </button>
                 )} */}
-                <button className="add-btn" onClick={addPassenger}>
+                <button
+                    className="add-btn"
+                    onClick={() => {
+                        // passArray.push({});
+                        addPassenger();
+                    }}
+                >
                     + Add Passenger
                 </button>
             </div>
