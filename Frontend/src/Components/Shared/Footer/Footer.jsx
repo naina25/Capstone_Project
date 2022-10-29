@@ -16,7 +16,7 @@ const Footer = () => {
 			</div>
 
 			<div class="col-2">
-				<h3>CONTACT</h3>
+				<h3>Contact</h3>
 				<p>
 					Noida sector 62, Logix park
 					<br />
@@ -32,6 +32,7 @@ const Footer = () => {
 			</div>
 
 			<div class="col-3">
+				<img src="https://cdn-icons-png.flaticon.com/512/748/748481.png?w=740&t=st=1666000669~exp=1666001269~hmac=c1a70a67ef3824596ce3f4c76b7536dc630bb5ca01d24102561a56d626d92372" alt="" />
 				<h3>KnowYourBus</h3>
 				<p>
 					KnowYourBus is the world's largest online <br />

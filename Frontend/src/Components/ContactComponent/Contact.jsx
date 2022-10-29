@@ -2,10 +2,12 @@ import React from 'react'
 import './Contact.css'
 function Contact(props) {
   return (
-     <div className='card-container'>
+     <section>
+        <div className='card-container'>
         <div className='image-container'>
             <img src={props.imageurl} alt="" />
         </div>
+
         <div className='card-content'>
             <div className='card-title'>
                 <h1>{props.text}</h1>
@@ -15,6 +17,7 @@ function Contact(props) {
             </div>
         </div>
     </div>
+    </section>
   )
 }
 
