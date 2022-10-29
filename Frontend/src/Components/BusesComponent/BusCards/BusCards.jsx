@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Amenities from "../Amenities/Amenities";
 import Policies from "../Policies/Policies";
 import BookNow from "../BookNow/BookNow";
+import ProtectedRoute from "../../../Routes/ProtectedRoute";
 
 const BusCards = (props) => {
     const [showAmenities, setShowAmenities] = useState(false);
@@ -116,9 +117,11 @@ const BusCards = (props) => {
                 className="book-div"
                 style={openBookNow ? openBookNowComp : closeBookNowComp}
             >
-                <ProtectedRoute>
-                    <BookNow routeid={props.routeid} />
-                </ProtectedRoute>
+                {openBookNow && (
+                    <ProtectedRoute>
+                        <BookNow routeid={props.routeid} />
+                    </ProtectedRoute>
+                )}
             </div>
         </div>
     );
