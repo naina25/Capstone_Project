@@ -8,7 +8,7 @@ import Buses from "./Pages/Buses";
 import Profile from "./Pages/Profile";
 import Foffers from "./Pages/Foffers";
 import ContactUs from "./Pages/ContactUs";
-import AboutUs from "./Pages/AboutUs";
+import AboutUs from "./Pages/AboutUs"
 import { AuthProvider } from "./Context/auth.context";
 import Cookies from "universal-cookie";
 import ProtectedRoute from "./Routes/ProtectedRoute";
