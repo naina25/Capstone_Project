@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from "react";
 import "./BookNow.css";
 import axios from "axios";
+import { useAuth } from "../../../Context/auth.context";
+import jwt_decode from "jwt-decode";
+import { useNavigate } from "react-router";
 
 const BookNow = (props) => {
     const [passList, setPassList] = useState([{ value: "" }]);
-    const [passinfo, setPassInfo] = useState();
+    // const [passinfo, setPassInfo] = useState();
+    const { userToken } = useAuth();
+    const userId = jwt_decode(userToken).User_id;
+    console.log(userId);
     const [passengerDetails, setPassengerDetails] = useState({
         routeid: props.routeid,
-        userid: 1,
-        name: "",
+        userid: userId,
+        passengername: "",
         age: "",
         gender: "",
         email: "",
@@ -18,8 +24,8 @@ const BookNow = (props) => {
     const [passDetailsArr, setPassDetailsArr] = useState([
         {
             routeid: props.routeid,
-            userid: 1,
-            name: "",
+            userid: userId,
+            passengername: "",
             age: "",
             gender: "",
             email: "",
@@ -44,14 +50,19 @@ const BookNow = (props) => {
             return [...prev, { value: "" }];
         });
     };
+    const navigate = useNavigate();
 
     const postPassenger = async () => {
         axios
-            .post("https://localhost:44387/api/Bookings/BookNow")
+            .post(
+                "https://localhost:44387/api/Bookings/BookNow",
+                passDetailsArr
+            )
             .then((res) => {
-                console.log(res);
-                setPassInfo(res);
+                console.log(res.data);
+                alert("Ticket booked successfully!!");
             });
+        navigate("/");
     };
 
     const handleChangeName = (index, e) => {
@@ -59,7 +70,7 @@ const BookNow = (props) => {
             return passArr.map((pass, i) => {
                 if (i === index) {
                     console.log(i);
-                    return { ...pass, name: e.target.value };
+                    return { ...pass, passengername: e.target.value };
                 } else return pass;
             });
         });
@@ -110,7 +121,7 @@ const BookNow = (props) => {
     //     setPassList(passList);
     // };
     return (
-        <form className="form-popup" id="myForm">
+        <form className="form-popup" id="myForm" onSubmit={postPassenger}>
             <h1>Passenger Details</h1>
             {passList.map((singlepass, index) => (
                 <div key={index} className="form-content">
