@@ -2,30 +2,28 @@
     padding: 0;
     text-align: center;
     font-size: 2rem;
-    padding: 0 3rem;
+    padding: 3rem 3rem;
+    margin-bottom: 3rem;
 }
 .review-card{
     display: flex;
     align-items: center;
-    justify-content: center;  
     border-radius: 15px;
     box-shadow: rgb(119 119 119 / 16%) 2px 6px 25px;
     flex-direction: column;
-    height: 350px;
+    height: 400px;
 }
 
 .review-img{
     height: 100px;
     width: 100px;
-    border-radius: 50%;
     padding: 3px; 
     
 }
 .review-img img{
-    height: 100%;
-    width: 100%;
+    height: 100px;
+    width: 100px;
     object-fit: cover;
-    border-radius: 50%;
     padding-top: 15px;
 }
 .review-user{
