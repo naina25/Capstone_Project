@@ -2,7 +2,7 @@ import "./LoginForm.css";
 import React, { useState } from "react";
 import axios from "axios";
 import Cookies from "universal-cookie";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const LoginForm = () => {
 	const [password, setPassword] = useState("");
@@ -25,9 +25,6 @@ const LoginForm = () => {
 				const cookies = new Cookies();
 				cookies.set("my_cookie", token);
 				navigate("/");
-			})
-			.catch((err) => {
-				console.log(err);
 			});
 
 		window.location.reload();
@@ -60,6 +57,9 @@ const LoginForm = () => {
 					></input>
 				</div>
 				<button type="submit">Login</button>
+				<Link className="signup-link" to="/signup">
+					Not registered? Sign up now!!
+				</Link>
 			</form>
 		</div>
 	);

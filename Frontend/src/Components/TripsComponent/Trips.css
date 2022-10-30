@@ -2,20 +2,16 @@
     width: 77%;
     min-height: 40vh;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     box-sizing:content-box;
     outline: none;
     background-color: #eee;
     margin-bottom: 5rem;
     border-radius: 2rem;
-    /* box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.3); */
     position: relative;
-    /* margin-left: 32rem; */
     margin-left: 0rem;
     padding-top: 3rem;
     flex-direction: column;
-    /* margin-right: 0rem; */
    
 }
 
@@ -41,43 +37,6 @@
 .trips-h1 p{
     font-size: 1.5rem;
 }
-/* .container2 h1{
-    margin-top: -15rem;
-    margin-left: -20rem;
-} */
-/* 
-.col-div{
-    display: flex;
-    padding: 2rem;
-}
-
-.col1{
-    margin-left:0rem;
-}
-
-.col2{
-    margin-left: 5rem;
-}
-
-.col3{
-    margin-left: 5rem;
-}
-
-.col4{
-    margin-left: 5rem;
-}
-
-.col5{
-    margin-left: 5rem;
-}
-
-.col6{
-    margin-left: 5rem;
-}
-
-.col7{
-    margin-left: 5rem;
-} */
 
 table th,td{
     font-size: 1.5rem;

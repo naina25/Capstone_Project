@@ -45,7 +45,6 @@ const SearchForm = (props) => {
 		await axios
 			.post("https://localhost:44387/api/Routes/Search", formData)
 			.then((res) => {
-				console.log(res.data);
 				setSearchedData(res.data);
 			});
 	};
@@ -64,7 +63,6 @@ const SearchForm = (props) => {
 	};
 
 	const handleChangeDate = (e) => {
-		console.log(e.target.value);
 		setDepartDate(e.target.value);
 	};
 

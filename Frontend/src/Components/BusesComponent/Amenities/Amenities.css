@@ -1,7 +1,6 @@
 .amenities-div {
 	display: flex;
 	flex-wrap: wrap;
-	/* width: 80%; */
 	background-color: #f8f9fa;
 	padding: 2rem;
 	justify-content: center;

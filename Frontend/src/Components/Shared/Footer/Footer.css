@@ -35,7 +35,6 @@
     display: inline-flex;
 }
 .footer div h3 {
-    /* color: #fff; */
     font-weight: 500;
     margin-bottom: 10px;
     letter-spacing: 2px;
@@ -50,7 +49,6 @@
     text-decoration: none;
     color: #efefef;
     padding-top: 10px;
-    /* margin-bottom: 10px; */
     font-size: 1.5rem;
 }
 
