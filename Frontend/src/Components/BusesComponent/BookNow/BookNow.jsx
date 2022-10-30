@@ -7,11 +7,10 @@ import { useNavigate } from "react-router";
 
 const BookNow = (props) => {
     const [passList, setPassList] = useState([{ value: "" }]);
-    // const [passinfo, setPassInfo] = useState();
     const { userToken } = useAuth();
     const userId = jwt_decode(userToken).User_id;
-    console.log(userId);
-    const [passengerDetails, setPassengerDetails] = useState({
+
+    const passengerDetails = {
         routeid: props.routeid,
         userid: userId,
         passengername: "",
@@ -19,8 +18,7 @@ const BookNow = (props) => {
         gender: "",
         email: "",
         uid: "",
-    });
-
+    };
     const [passDetailsArr, setPassDetailsArr] = useState([
         {
             routeid: props.routeid,
@@ -32,13 +30,6 @@ const BookNow = (props) => {
             uid: "",
         },
     ]);
-
-    // useEffect(() => {
-    //     setPassDetailsArr((prev) => {
-    //         return [...prev, passengerDetails];
-    //     });
-    //     console.log(passDetailsArr);
-    // }, [passengerDetails]);
 
     useEffect(() => {
         console.log(passDetailsArr);
@@ -116,10 +107,6 @@ const BookNow = (props) => {
         });
     };
 
-    // const removePassenger = () => {
-    //     passList.filter((i, j) => index !== j);
-    //     setPassList(passList);
-    // };
     return (
         <form className="form-popup" id="myForm" onSubmit={postPassenger}>
             <h1>Passenger Details</h1>
@@ -195,15 +182,9 @@ const BookNow = (props) => {
                 </div>
             ))}
             <div className="add-user">
-                {/* {passList.length - 1 === index && (
-                    <button type="button" className="add-btn">
-                        + Add passenger
-                    </button>
-                )} */}
                 <button
                     className="add-btn"
                     onClick={() => {
-                        // passArray.push({});
                         addPassenger();
                     }}
                 >

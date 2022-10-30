@@ -14,8 +14,20 @@ const ProfileSidebar = (props) => {
             </div>
             <div className="profile-options">
                 <ul>
-                    <li onClick={()=>{props.setActiveState("profile")}}>Profile</li>
-                    <li onClick={()=>{props.setActiveState("trips")}}>Trips</li>
+                    <li
+                        onClick={() => {
+                            props.setActiveState("profile");
+                        }}
+                    >
+                        Profile
+                    </li>
+                    <li
+                        onClick={() => {
+                            props.setActiveState("trips");
+                        }}
+                    >
+                        Trips
+                    </li>
                     <li>Log Out</li>
                 </ul>
             </div>
