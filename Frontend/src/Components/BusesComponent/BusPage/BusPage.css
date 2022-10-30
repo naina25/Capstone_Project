@@ -5,6 +5,7 @@
     display: flex;
     margin-top: 3rem;
     transition: 1s;
+    justify-content: center;
 }
 #sidebar {
     margin-right: 2rem !important;

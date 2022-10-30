@@ -1,49 +1,34 @@
-.about-us{
+.about-us {
     display: flex;
     padding: 4rem;
 }
-
-
-.aboutus-content{
-    padding: 4rem;
-    margin-left: 4rem;
+.about-us-description {
+    padding-left: 4rem;
+}
+.about-us-description h1.heading {
+    font-size: 3rem;
+    color: #da0f32;
+}
+.about-us-description h2.heading {
+    color: #da0f32;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.about-us-description .about-us-content-body {
+    font-size: 1.5rem;
 }
 
-
-.aboutus-image img{
+.aboutus-image img {
     border-radius: 100%;
     height: 200px;
     width: 200px;
-    margin-left: 5px;
-} 
+    margin-right: 5rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 2px 6px 20px;
+}
 
-.hr-width{
+.hr-width {
     width: 100%;
 }
-
-/* .about-us-section
-{
-    margin-left: 4rem;
-    margin-bottom: 4rem;
-    padding-left: 4rem ;
+.aboutus-content h1 {
+    color: #da0f32;
 }
-
-.about-us-heading
-{
-    font-size: 20px;
-    text-align: center;
-    justify-content: center;
-}
-
-.about-us-content-body{
-    margin-top: 2rem;
-}
-
-
-
-.about-us img
-{
-    border-radius: 50%;
-    width: 200px;
-   height: 150px;
-} */

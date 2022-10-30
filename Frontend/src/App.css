@@ -22,38 +22,14 @@ section.buses-section {
     margin-right: 4rem;
 }
 
-.about-us-section
-{
+.about-us-section {
     margin-left: 4rem;
-    margin-bottom: 4rem;
-    padding-left: 4rem ;
+    margin-right: 4rem;
+    /* margin-bottom: 4rem; */
+    /* padding-left: 4rem; */
 }
-
-.about-us-heading
-{
-    font-size: 20px;
-    text-align: center;
-    justify-content: center;
-}
-
-.about-us-content-body{
-    margin-top: 2rem;
-}
-
-
-
-.about-us img
-{
-    border-radius: 50%;
-    width: 200px;
-   height: 150px;
-}
-
-.contact{
-    background-image: url('../src/assets/offersImgs/contactbg3.webp');
-    background-size: cover;
-    height: 130vh;
-    margin-top: -15rem;
-    display: flex;
-    margin-left: -6rem;
+.foffers-div h1 {
+    margin-left: 10rem;
+    font-size: 3rem;
+    color: #da0f32;
 }

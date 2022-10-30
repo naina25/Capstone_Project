@@ -8,16 +8,20 @@ import jwt_Decode from "jwt-decode";
 const Navbar = () => {
     const { authSuccess, userToken } = useAuth();
     let user_name = "";
+    let user_id = "";
 
     if (userToken) {
-        user_name = jwt_Decode(userToken).User_first_Name;
+        const decoded_token = jwt_Decode(userToken);
+        console.log(decoded_token);
+        user_name = decoded_token.User_first_Name;
+        user_id = decoded_token.User_id;
     }
 
     const navigate = useNavigate();
 
     function DropdownItem(props) {
         return (
-            <li className="dropdownItem">
+            <li onClick={props.handleClick} className="dropdownItem">
                 <p>{props.text}</p>
             </li>
         );
@@ -39,14 +43,18 @@ const Navbar = () => {
                     <h3 className="navbar-brand">
                         <NavLink to="/">Know Your Bus</NavLink>
                     </h3>
-                </div>
-                <div className="right flex items-center">
+
                     <div className="mx-2">
-                        <NavLink to="/offers">Offers</NavLink>
+                        <NavLink to="/">Home</NavLink>
                     </div>
                     <div className="mx-2">
                         <NavLink to="/aboutus">About</NavLink>
                     </div>
+                    <div className="mx-2">
+                        <NavLink to="/offers">Offers</NavLink>
+                    </div>
+                </div>
+                <div className="right flex items-center">
                     <div className="mx-2">
                         <NavLink to="/contact">Contact Us</NavLink>
                     </div>
@@ -65,8 +73,13 @@ const Navbar = () => {
                                 }`}
                             >
                                 <ul>
-                                    <DropdownItem text={"My Profile"} />
-                                    <DropdownItem text={"My Trips"} />
+                                    <DropdownItem
+                                        text={"My Profile"}
+                                        handleClick={() =>
+                                            navigate(`/users/${user_id}`)
+                                        }
+                                    />
+                                    {/* <DropdownItem text={"My Trips"} /> */}
                                     <DropdownItem text={"Logout"} />
                                 </ul>
                             </div>

@@ -49,4 +49,10 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
     cursor: pointer;
+    font-weight: 500;
+}
+
+.profile-options li:hover {
+    color: #da0f32;
+    font-weight: 700;
 }
