@@ -12,7 +12,6 @@ const Navbar = () => {
 
 	if (userToken) {
 		const decoded_token = jwt_Decode(userToken);
-		console.log(decoded_token);
 		user_name = decoded_token.User_first_Name;
 		user_id = decoded_token.User_id;
 	}
@@ -79,7 +78,6 @@ const Navbar = () => {
 											navigate(`/users/${user_id}`)
 										}
 									/>
-									{/* <DropdownItem text={"My Trips"} /> */}
 									<DropdownItem
 										text={"Logout"}
 										handleClick={() => {

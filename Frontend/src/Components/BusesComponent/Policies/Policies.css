@@ -32,7 +32,6 @@
 }
 .cancel-table table * {
     border: 1px solid #b2b2b2;
-    /* border-radius: 20px; */
     overflow: hidden;
     margin-bottom: 20px;
 }
