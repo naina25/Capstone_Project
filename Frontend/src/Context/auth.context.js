@@ -7,6 +7,7 @@ const AuthContext = createContext(null);
 export const AuthProvider = (props) => {
     const [userToken, setUserToken] = useState(props.tokenData);
     const [authSuccess, setAuthSuccess] = useState();
+
     useEffect(() => {
         const authUser = async () => {
             try {

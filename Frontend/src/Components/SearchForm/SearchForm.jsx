@@ -100,7 +100,7 @@ const SearchForm = (props) => {
                 <input
                     className="date"
                     type="date"
-                    placeholder="Choose Date"
+                    placeholder="choose date"
                     onChange={handleChangeDate}
                     value={departDate}
                 />

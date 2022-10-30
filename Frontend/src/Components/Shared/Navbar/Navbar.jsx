@@ -1,11 +1,20 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../../Context/auth.context";
+import jwt_Decode from "jwt-decode";
 
 const Navbar = () => {
-    const { authSuccess } = useAuth();
+    const { authSuccess, userToken } = useAuth();
+    let user_name = "";
+
+    if (userToken) {
+        user_name = jwt_Decode(userToken).User_first_Name;
+    }
+
+    const navigate = useNavigate();
+
     function DropdownItem(props) {
         return (
             <li className="dropdownItem">
@@ -13,6 +22,7 @@ const Navbar = () => {
             </li>
         );
     }
+
     const [open, setOpen] = useState(false);
     return (
         <div className="header">
@@ -29,14 +39,6 @@ const Navbar = () => {
                     <h3 className="navbar-brand">
                         <NavLink to="/">Know Your Bus</NavLink>
                     </h3>
-                    <ul className="flex items-center justify-center uppercase semibold">
-                        {/* <li>Know Your Bus</li>
-                        <li>
-                            <NavLink to="/buses">Bus Tickets</NavLink>
-                        </li>
-                        <li>New rides</li>
-                        <li></li> */}
-                    </ul>
                 </div>
                 <div className="right flex items-center">
                     <div className="mx-2">
@@ -46,20 +48,35 @@ const Navbar = () => {
                     <div className="mx-2">
                         <NavLink to="/contact">Contact Us</NavLink>
                     </div>
-                    <div className="mx-2" onClick={() => setOpen(!open)}>
-                        <AccountCircleIcon />
-                    </div>
-                    <div
-                        className={`dropdown-menu ${
-                            open ? "active" : "inactive"
-                        }`}
-                    >
-                        <ul>
-                            <DropdownItem text={"My Profile"} />
-                            <DropdownItem text={"My Trips"} />
-                            <DropdownItem text={"Logout"} />
-                        </ul>
-                    </div>
+                    {authSuccess === true ? (
+                        <div className="login-navlink">
+                            <div
+                                className="mx-2 username"
+                                onClick={() => setOpen(!open)}
+                            >
+                                <AccountCircleIcon />
+                                <span>Hi, {user_name}</span>
+                            </div>
+                            <div
+                                className={`dropdown-menu ${
+                                    open ? "active" : "inactive"
+                                }`}
+                            >
+                                <ul>
+                                    <DropdownItem text={"My Profile"} />
+                                    <DropdownItem text={"My Trips"} />
+                                    <DropdownItem text={"Logout"} />
+                                </ul>
+                            </div>
+                        </div>
+                    ) : (
+                        <div
+                            className="mx-2"
+                            onClick={() => navigate("/login")}
+                        >
+                            Sign In/Sign Up
+                        </div>
+                    )}
                 </div>
             </nav>
         </div>
