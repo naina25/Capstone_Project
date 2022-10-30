@@ -65,7 +65,11 @@ const Navbar = () => {
                                 }`}
                             >
                                 <ul>
-                                    <DropdownItem text={"My Profile"} />
+                                    <DropdownItem
+                                        text=<NavLink to="/users/:user_id">
+                                            {"My Profile"}
+                                        </NavLink>
+                                    />
                                     <DropdownItem text={"My Trips"} />
                                     <DropdownItem text={"Logout"} />
                                 </ul>
