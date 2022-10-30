@@ -47,7 +47,7 @@ const BusCards = (props) => {
 				<div className="bus-card-info">
 					<div className="travel-info">
 						<div className="boarding-info timing-info">
-							<p>Boarding Time: 25/10/2022</p>
+							<p>Boarding Time: {props.departure_Time_Date.substring(0, 10)}</p>
 							<p>09:45</p>
 							<h2>{props.departureCity}</h2>
 							<p>Boarding point</p>
@@ -58,7 +58,7 @@ const BusCards = (props) => {
 							<hr />
 						</div>
 						<div className="arrival-info timing-info">
-							<p>Arrival Time: 25/10/2022</p>
+							<p>Arrival Time: {props.destination_Time_Date}</p>
 							<p>18:15</p>
 							<h2>{props.destinationCity}</h2>
 							<p>Dropping point</p>

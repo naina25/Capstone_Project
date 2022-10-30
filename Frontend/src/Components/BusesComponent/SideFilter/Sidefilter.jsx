@@ -1,10 +1,13 @@
-import React from "react";
+import axios from "axios";
+import React,{usestate} from "react";
 import "./SideFilter.css";
 const Sidefilter = () => {
+
 	return (
 		<>
 			<div id="sidebar">
 				<div className="filter-div">
+					<h6>Sort</h6>
 					<h6 className="p-1 border-bottom">DEPARTURE TIME</h6>
 					<ul>
 						<li>
