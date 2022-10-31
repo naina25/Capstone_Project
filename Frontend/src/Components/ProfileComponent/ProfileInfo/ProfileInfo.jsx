@@ -25,7 +25,7 @@ const ProfileInfo = (props) => {
                 </div>
                 <div className="info">
                     <p className="label">Email Id</p>
-                    <p>nanu02d8@gmail.com</p>
+                    <p>shreeshDuttaBajpai@gmail.com</p>
                 </div>
                 <div className="info">
                     <p className="label">Contact number</p>

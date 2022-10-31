@@ -4,29 +4,29 @@
     font-size: 2rem;
     padding: 0 3rem;
 }
-.row{
+.row {
     display: flex;
     flex-wrap: wrap;
 }
-.cities-card{
+.cities-card {
     width: 18%;
     padding: 2rem;
     border-radius: 10px;
     padding-left: 23px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     box-shadow: rgb(119 119 119 / 16%) 2px 6px 25px;
     margin: 15px;
 }
 
-.cities-card img{
+.cities-card img {
     width: 71px;
     height: 52px;
     border-radius: 10px;
 }
-.cities-txt{
-    display: flex;    
+.cities-txt {
+    display: flex;
     font-size: 16px;
     font-weight: 400;
     height: 50%;
@@ -35,8 +35,8 @@
     text-align: left;
 }
 .cities-txt p {
-    margin: 0!important;
+    margin: 0 !important;
 }
-.cities-txt p.city{
+.cities-txt p.city {
     font-weight: 600;
 }

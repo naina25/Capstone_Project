@@ -16,33 +16,33 @@ const Cities = () => {
         <section className="cities-section">
             <SectionHeading
                 title="Travel Anywhere"
-                subtitle="Just a click away"
+                subtitle="Travel in your favourite cities with us"
             />
             <div className="row">
                 <CityCard
                     img={cityimg1}
                     cityName="Chandigarh"
-                    numberOfBuses={10}
+                    // numberOfBuses={10}
                 />
-                <CityCard img={cityimg2} cityName="Jaipur" numberOfBuses={10} />
+                <CityCard img={cityimg2} cityName="Jaipur" />
                 <CityCard
                     img={cityimg3}
                     cityName="Amritsar"
-                    numberOfBuses={10}
+                    // numberOfBuses={10}
                 />
-                <CityCard img={cityimg4} cityName="Manali" numberOfBuses={12} />
+                <CityCard img={cityimg4} cityName="Manali" />
                 <CityCard
                     img={cityimg5}
                     cityName="Lucknow"
-                    numberOfBuses={11}
+                    // numberOfBuses={11}
                 />
                 <CityCard
                     img={cityimg6}
                     cityName="Haridwar"
-                    numberOfBuses={8}
+                    // numberOfBuses={8}
                 />
-                <CityCard img={cityimg7} cityName="Mumbai" numberOfBuses={4} />
-                <CityCard img={cityimg8} cityName="Delhi" numberOfBuses={18} />
+                <CityCard img={cityimg7} cityName="Mumbai" />
+                <CityCard img={cityimg8} cityName="Delhi" />
             </div>
         </section>
     );

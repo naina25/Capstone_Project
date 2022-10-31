@@ -6,7 +6,6 @@ const CityCard = (props) => {
             <img className="cities-img" src={props.img} alt="" />
             <div className="cities-txt">
                 <p className="city">{props.cityName}</p>
-                <p>{props.numberOfBuses} Buses Available</p>
             </div>
         </div>
     );
