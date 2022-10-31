@@ -110,7 +110,10 @@ const BusCards = (props) => {
 				<Amenities />
 			</div>
 			<div style={showPolicies ? showPoliciesStyle : hidePoliciesStyle}>
-				<Policies />
+				<Policies
+					showPolicies={showPolicies}
+					setShowPolicies={setShowPolicies}
+				/>
 			</div>
 			<div
 				className="book-div"
