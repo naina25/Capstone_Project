@@ -2,18 +2,24 @@ import React, { useEffect, useState } from "react";
 import "./Trips.css";
 import DirectionsBusIcon from "@mui/icons-material/DirectionsBus";
 import axios from "axios";
+import { useAuth } from "../../Context/auth.context";
+import jwt_decode from "jwt-decode";
 
 function Trips() {
 	const [trips, setTrips] = useState([]);
-	const getTrips = async () => {
-		await axios.get("https://localhost:44387/api/trip").then((res) => {
-			setTrips(res.data);
-		});
-	};
+	const { userToken } = useAuth();
 
 	useEffect(() => {
+		const decoded = jwt_decode(userToken);
+		const getTrips = async () => {
+			await axios
+				.get(`https://localhost:44387/api/trip/${decoded.User_id}`)
+				.then((res) => {
+					setTrips(res.data);
+				});
+		};
 		getTrips();
-	}, []);
+	}, [userToken]);
 
 	return (
 		<div className="container2">
