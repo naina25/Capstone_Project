@@ -22,6 +22,11 @@
     height: 2px;
     width: 100%;
 }
+.pol-headings button {
+    border: none;
+    border-radius: 100%;
+    background: none;
+}
 .pol-headings svg {
     position: relative;
     top: 0px;
