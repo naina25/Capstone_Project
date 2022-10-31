@@ -25,9 +25,11 @@ const LoginForm = () => {
 				const cookies = new Cookies();
 				cookies.set("my_cookie", token);
 				navigate("/");
+				window.location.reload();
+			})
+			.catch(() => {
+				alert("Incorrect credentials");
 			});
-
-		window.location.reload();
 	};
 
 	return (

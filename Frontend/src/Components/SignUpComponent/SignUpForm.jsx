@@ -30,6 +30,9 @@ const SignUpForm = () => {
 			.then((res) => {
 				alert("User added successfully!");
 				navigate("/");
+			})
+			.catch(() => {
+				alert("Some error occurred");
 			});
 	};
 
