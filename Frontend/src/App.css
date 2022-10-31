@@ -57,3 +57,35 @@ section.buses-section {
     display: flex;
     margin-left: -6rem;
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+      width: 620px;
+      overflow-x: hidden;
+    }
+    .items-center,nav{
+        padding: 0px!important;
+    }
+    .header{
+        height: 75px!important;
+    }
+    .mx-2, .mx-2 a{
+        /* margin-left: 0px; */
+        margin-left: 10px!important;
+        margin-right: 10px!important;
+    }
+    .offer-cards {
+        width: 33%;
+        padding: 10px;
+    }
+    .cities-card{
+        width: 40%!important;
+        margin: 0px!important;
+        padding: 10px;
+    }
+    
+    .col-md-4.text-center {
+        width: 49%;
+    }
+
+  }

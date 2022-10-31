@@ -4,16 +4,18 @@
 import SearchForm from "../Components/SearchForm/SearchForm";
 import BusPage from "../Components/BusesComponent/BusPage/BusPage";
 import { useLocation } from "react-router-dom";
+import { useState } from "react";
 
 const Buses = () => {
     const location = useLocation();
 
-    const routes = location.state.searchedData;
+    // const routes = location.state.searchedData;
+    const [routes,setRoutes]=useState(location.state.searchedData);
 
     return (
         <section className="buses-section">
             <SearchForm routes={routes} />
-            <BusPage routes={routes} />
+            <BusPage routes={routes} setRoutes={setRoutes} />
         </section>
     );
 };
